@@ -7,8 +7,9 @@ export default defineConfig({
   resolve:{
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src/') },
-      { find: '@components', replacement: path.resolve(__dirname, 'src/components') },
       { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
+      { find: '@domain', replacement: path.resolve(__dirname, 'src/domain') },
+      { find: '@assets', replacement: path.resolve(__dirname, 'src/assets') },
     ],
   },
   plugins: [react()],

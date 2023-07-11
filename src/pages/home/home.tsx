@@ -1,9 +1,8 @@
+import PageView from "@domain/page-view/components/page-view/page-view";
 
 const Home: React.FC = () => {
     return (
-      <>
-          Page Home
-      </>
+        <PageView/>
     );
   };
   

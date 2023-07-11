@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "@components/navbar";
+import NavBar from "@domain/common/components/navbar";
 import Rent from "@pages/rent";
 import Buy from "@pages/buy";
 import Home from "@pages/home";
@@ -13,7 +13,6 @@ function App() {
   // Realização da reserva
 
   return (
-    
       <>
       <Router>
         <NavBar />

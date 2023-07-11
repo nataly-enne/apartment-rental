@@ -7,7 +7,7 @@ const NavbarContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #0e0e0e;
+  background-color: #D0DDFF;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 `;
 
@@ -17,10 +17,10 @@ const LogoContainer = styled.div`
     text-shadow: 0 0.5px 0 rgba(255, 255, 255, 0.4);
     font-weight: 500;
     cursor: pointer;
-    color: rgb(231, 231, 231);
+    color: #242424;
   }
   span:hover {
-    color: rgba(231, 231, 231, 0.8);
+    color: #2562FF;
   }
 `;
 
@@ -33,10 +33,10 @@ const LinkContainer = styled.div`
 
 const LinkStyled = styled(Link)`
   text-decoration: none;
-  color: rgb(231, 231, 231);
+  color: #242424;
 
   &:hover {
-    color: rgba(231, 231, 231, 0.8);
+    color: #2562FF;
   }
 `;
 
@@ -44,7 +44,7 @@ const NavBar: React.FC = () => {
   return (
     <NavbarContainer>
       <LogoContainer>
-        <LinkStyled to="/">Apartment Rental</LinkStyled>
+        <LinkStyled to="/">Home Rental</LinkStyled>
       </LogoContainer>
       <LinkContainer>
         <LinkStyled to="/rent"> Alugar</LinkStyled>

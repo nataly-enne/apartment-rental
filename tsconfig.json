@@ -17,8 +17,9 @@
     "jsx": "react-jsx",
     "types": ["node"],
     "paths": {
-      "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@assets/*": ["./src/assets/*"],
       "@/*": ["./src/*"]
     }
   },
