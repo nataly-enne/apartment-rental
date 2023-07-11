@@ -77,7 +77,7 @@ const PageView: React.FC = () => {
             }}
             waves="light"
           >
-            Button
+            Buscar
           </Button>
           </div>
 
