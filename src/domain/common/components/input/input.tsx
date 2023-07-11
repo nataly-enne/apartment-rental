@@ -1,10 +1,14 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
+import { TextInput } from "react-materialize";
+import './styles.css'
 
 const Input: React.FC = () => {
   return (
     <>
-      <TextField size="small" id="outlined-basic" label="Onde deseja morar?" variant="outlined" />
+      <TextInput
+        id="text-input"
+        label="Onde deseja morar?"
+      />
     </>
   );
 };

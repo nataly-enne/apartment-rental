@@ -1,7 +1,7 @@
 import homePageImage from '@/assets/homepage.png';
 import styled from 'styled-components';
 
-import Button from '@mui/material/Button';
+import { Button } from 'react-materialize';
 
 import Input from '@domain/common/components/input/input';
 import SelectComponent from '@domain/common/components/select/select';
@@ -10,13 +10,14 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #D0DDFF;
+  background-color: #BBDEFB;
+  padding: 50px;
 `;
 
 const Image = styled.div`
     width: 820px;
   img {
-    width: 600px;
+    width: 550px;
   }
 `;
 
@@ -31,11 +32,18 @@ const ContentWrapper = styled.div`
 const InputWrapper = styled.div`
   flex: 1;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 30px;
 `;
 
 const InputContent = styled.div`
   display: flex;
   align-items: center;
+`;
+
+const Subtitle = styled.p`
+  font-weight: 300;
 `;
 
 const PageView: React.FC = () => {
@@ -50,20 +58,27 @@ const PageView: React.FC = () => {
       <ContentWrapper>
         <div>
           <h2>O imóvel do jeito que você procura tá aqui</h2>
-          <p>6,5 milhões de opções pra encontrar seu novo lar.</p>
+          <Subtitle>6,5 milhões de opções pra encontrar seu novo lar.</Subtitle>
         </div>
 
         <InputContent>
           <InputWrapper>
             <Input/>
-          </InputWrapper>
-
-          <InputWrapper>
             <SelectComponent/>
           </InputWrapper>
           
           <div>
-          <Button variant="outlined" size='large'>Buscar</Button>
+          <Button
+          className='blue accent-3'
+            large
+            node="a"
+            style={{
+              marginRight: '5px'
+            }}
+            waves="light"
+          >
+            Button
+          </Button>
           </div>
 
         </InputContent>

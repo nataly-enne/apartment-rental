@@ -7,7 +7,7 @@ const NavbarContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #D0DDFF;
+  background-color: #BBDEFB;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
 `;
 
@@ -34,9 +34,10 @@ const LinkContainer = styled.div`
 const LinkStyled = styled(Link)`
   text-decoration: none;
   color: #242424;
+  font-size: 16px;
 
   &:hover {
-    color: #2562FF;
+    color: #2979ff;
   }
 `;
 
