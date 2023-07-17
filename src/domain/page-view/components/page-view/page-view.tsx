@@ -69,7 +69,7 @@ const PageView: React.FC = () => {
           
           <div>
           <Button
-          className='blue accent-3'
+            className='blue accent-3'
             large
             node="a"
             style={{
