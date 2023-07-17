@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBuilding } from "@fortawesome/free-regular-svg-icons";
 
 const NavbarContainer = styled.nav`
   width: 100%;
@@ -12,16 +14,30 @@ const NavbarContainer = styled.nav`
 `;
 
 const LogoContainer = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
   margin-left: 40px;
+
+  &:hover {
+    svg {
+      color: #2979ff;
+    }
+  }
+
+  svg {
+    color: #242424;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
   span {
     text-shadow: 0 0.5px 0 rgba(255, 255, 255, 0.4);
     font-weight: 500;
     cursor: pointer;
     color: #242424;
   }
-  span:hover {
-    color: #2562FF;
-  }
+
 `;
 
 const LinkContainer = styled.div`
@@ -45,6 +61,7 @@ const NavBar: React.FC = () => {
   return (
     <NavbarContainer>
       <LogoContainer>
+        <FontAwesomeIcon icon={faBuilding} />
         <LinkStyled to="/">Home Rental</LinkStyled>
       </LogoContainer>
       <LinkContainer>
