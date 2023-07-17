@@ -63,7 +63,7 @@ const PageView: React.FC = () => {
 
         <InputContent>
           <InputWrapper>
-            <Input/>
+            <Input label="Onde deseja morar?"/>
             <SelectComponent/>
           </InputWrapper>
           

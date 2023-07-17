@@ -2,12 +2,16 @@ import React from "react";
 import { TextInput } from "react-materialize";
 import './styles.css'
 
-const Input: React.FC = () => {
+type Props = {
+  label: string;
+}
+
+const Input: React.FC<Props> = ({ label }) => {
   return (
     <>
       <TextInput
         id="text-input"
-        label="Onde deseja morar?"
+        label={label}
       />
     </>
   );

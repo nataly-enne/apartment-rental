@@ -13,10 +13,12 @@ import {
   Informations,
   InformationsContent,
 } from "./rent-list.styles";
+import SearchBar from "@domain/rent/components/search-bar/index";
 
 const RentList: React.FC = () => {
   return (
     <>
+    <SearchBar/>
       <Row>
         <Col s={2}></Col>
         <Col s={8}>
