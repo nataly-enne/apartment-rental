@@ -53,7 +53,7 @@ const RentList: React.FC = () => {
               ]}
               closeIcon={<Icon>close</Icon>}
               header={
-                <CardImage src="https://resizedimgs.zapimoveis.com.br/fit-in/1600x720/named.images.sp/cc7e0e061bea446871499895a868f508/apartamento-com-3-quartos-para-alugar-55m-no-ponta-negra-natal.jpg" />
+                <CardImage src={property.banner} />
               }
               horizontal
               revealIcon={<Icon>more_vert</Icon>}
