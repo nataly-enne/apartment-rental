@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 20px 0 0 50px;
+  margin: 20px 50px 0;
 `;
 
 const InputWrapper = styled.div`

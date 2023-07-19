@@ -1,0 +1,17 @@
+{
+    "properties": [
+        {
+            "id": 1,
+            "neighborhood": "Ponta Negra",
+            "city": "Natal",
+            "uf": "RN",
+            "address": "Rua Doutor Manoel Augusto Bezerra de Araújo, 4894",
+            "description": "⏰ Não perca esta oportunidade 📞 Entre em contato e agende a sua visita Ronaldo Sobral - Creci 6087",
+            "floorSize": 55,
+            "bedroom": 2,
+            "bathroom": 2,
+            "price": 3700,
+            "banner": "https://resizedimgs.zapimoveis.com.br/fit-in/1600x720/named.images.sp/cc7e0e061bea446871499895a868f508/apartamento-com-3-quartos-para-alugar-55m-no-ponta-negra-natal.jpg"
+        }
+    ]
+}
