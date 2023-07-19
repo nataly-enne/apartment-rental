@@ -25,6 +25,8 @@ const RentList: React.FC = () => {
 
   const { data: properties } = useQuery("properties", getProperties);
 
+  const whatsappLink = "https://wa.me/+5584998277184?text=Olá!%20Gostaria%20de%20conversar%20sobre%20um%20imóvel."
+
   return (
     <>
       <SearchBar />
@@ -40,14 +42,16 @@ const RentList: React.FC = () => {
                     <p>Aluguel de R$ {property.price}</p>
                   </div>
                   <div>
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     <Button
                       className="blue accent-3"
-                      node="button"
+                      node="a"
                       waves="light"
                     >
                       Mensagem
                       <Icon right>message</Icon>
                     </Button>
+                    </a>
                   </div>
                 </ActionContainer>,
               ]}
