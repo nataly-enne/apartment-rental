@@ -41,10 +41,9 @@ const LogoContainer = styled.div`
 `;
 
 const LinkContainer = styled.div`
-  margin-right: 20px;
   display: flex;
   justify-content: space-evenly;
-  width: 160px;
+  width: 140px;
 `;
 
 const LinkStyled = styled(Link)`
@@ -66,7 +65,6 @@ const NavBar: React.FC = () => {
       </LogoContainer>
       <LinkContainer>
         <LinkStyled to="/rent"> Alugar</LinkStyled>
-        <LinkStyled to="/buy"> Comprar</LinkStyled>
       </LinkContainer>
     </NavbarContainer>
   );
