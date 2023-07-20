@@ -4,14 +4,18 @@ import './styles.css'
 
 type Props = {
   label: string;
+  value?: string;
+  onChange?: () => void;
 }
 
-const Input: React.FC<Props> = ({ label }) => {
+const Input: React.FC<Props> = ({ label, value, onChange }) => {
   return (
     <>
       <TextInput
         id="text-input"
         label={label}
+        value={value}
+        onChange={onChange}
       />
     </>
   );

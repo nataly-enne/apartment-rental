@@ -1,10 +1,11 @@
-import homePageImage from '@/assets/homepage.png';
-import styled from 'styled-components';
+import { SetStateAction, useState } from "react";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { Button, TextInput } from "react-materialize";
 
-import { Button } from 'react-materialize';
-
+import homePageImage from "@/assets/homepage.png";
+import SelectComponent from "@domain/common/components/select/select";
 import Input from '@domain/common/components/input/input';
-import SelectComponent from '@domain/common/components/select/select';
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-    width: 820px;
+  width: 820px;
   img {
     width: 550px;
   }
@@ -47,46 +48,58 @@ const Subtitle = styled.p`
 `;
 
 const PageView: React.FC = () => {
-  
-  return (
-      
-    <Container>
-      <Image>
-        <img src={homePageImage} alt="" />
-      </Image>
-      
-      <ContentWrapper>
-        <div>
-          <h2>O imóvel do jeito que você procura tá aqui</h2>
-          <Subtitle>6,5 milhões de opções pra encontrar seu novo lar.</Subtitle>
-        </div>
+  const navigate = useNavigate();
+  const [city, setCity] = useState<string>("");
+  const [type, setType] = useState<string>("");
 
-        <InputContent>
-          <InputWrapper>
-            <Input label="Onde deseja morar?"/>
-            <SelectComponent/>
-          </InputWrapper>
-          
-          <div>
-          <Button
-            className='blue accent-3'
-            large
-            node="a"
-            style={{
-              marginRight: '5px'
-            }}
-            waves="light"
-          >
-            Buscar
-          </Button>
-          </div>
-
-        </InputContent>
-      </ContentWrapper>
-    </Container>
-      
+  const handleSearch = () => {
+    navigate(
+      `/rent?city=${city}&type=${type}`
     );
   };
+  return (
+      
+      <Container>
+        <Image>
+          <img src={homePageImage} alt="" />
+        </Image>
+        
+        <ContentWrapper>
+          <div>
+            <h2>O imóvel do jeito que você procura tá aqui</h2>
+            <Subtitle>6,5 milhões de opções pra encontrar seu novo lar.</Subtitle>
+          </div>
   
-  export default PageView;
+          <InputContent>
+            <InputWrapper>
+              <Input 
+                label="Onde deseja morar?"
+                value={city}
+                onChange={(event) => setCity(event.target.value)}
+              />
+              <SelectComponent onChange={(event) => setType(event.target.value)} value={type}/>
+            </InputWrapper>
+            
+            <div>
+            <Button
+              className='blue accent-3'
+              large
+              node="a"
+              style={{
+                marginRight: '5px'
+              }}
+              waves="light"
+              onClick={handleSearch}
+            >
+              Buscar
+            </Button>
+            </div>
   
+          </InputContent>
+        </ContentWrapper>
+      </Container>
+        
+      );
+};
+
+export default PageView;

@@ -2,14 +2,19 @@ import React from "react";
 import { Select } from  "react-materialize"
 import './styles.css'
 
-const SelectComponent: React.FC = () => {
+type Props = {
+  value: string;
+  onChange: () => any;
+}
+
+const SelectComponent: React.FC<Props> = ({ value, onChange }) => {
 
   return (
     <>
       <Select
         id="Select-37"
         multiple={false}
-        onChange={() => {}}
+        onChange={onChange}
         options={{
           classes: '',
           dropdownOptions: {
@@ -23,7 +28,7 @@ const SelectComponent: React.FC = () => {
             outDuration: 250
           }
         }}
-        value=""
+        value={value}
       >
         <option
           disabled
@@ -31,16 +36,16 @@ const SelectComponent: React.FC = () => {
         >
           Tipo de imóvel
         </option>
-        <option value="1">
+        <option value="apt">
         Apartamento
         </option>
-        <option value="2">
+        <option value="kitnet">
         Kitnet
         </option>
-        <option value="3">
+        <option value="casa">
         Casa
         </option>
-        <option value="4">
+        <option value="flat">
         Flat
         </option>
       </Select>

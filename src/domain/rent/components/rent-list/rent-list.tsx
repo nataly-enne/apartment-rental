@@ -1,5 +1,7 @@
 import { Row, Col, Card, Icon, Button } from "react-materialize";
 import { useQuery } from "react-query";
+import { useLocation } from "react-router-dom";
+
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -18,8 +20,14 @@ import {
 import SearchBar from "@domain/rent/components/search-bar/index";
 
 const RentList: React.FC = () => {
+
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const city = searchParams.get("city") ?? '';
+  const type = searchParams.get("type") ?? '';
+
   const getProperties = async () => {
-    const response = await axios.get("http://localhost:5099/properties");
+    const response = await axios.get(`http://localhost:5099/properties?city=${city}&type=${type}`);
     return response.data;
   };
 
