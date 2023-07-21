@@ -1,6 +1,6 @@
 # Home Rental
 
-Site de aluguel de imóveis desenvolvido na matéria de Tópicos Especiais em Engenharia de Software VI (Frameworks JS para Front-End)
+Site de aluguel de imóveis desenvolvido na matéria de Tópicos Especiais em Engenharia de Software VI (Frameworks JS para Front-End).
 
 ## Build Setup
 
