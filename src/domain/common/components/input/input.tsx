@@ -5,7 +5,7 @@ import './styles.css'
 type Props = {
   label: string;
   value?: string;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: React.FC<Props> = ({ label, value, onChange }) => {

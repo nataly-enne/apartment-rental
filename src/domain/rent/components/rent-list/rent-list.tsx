@@ -18,6 +18,7 @@ import {
   InformationsContent,
 } from "./rent-list.styles";
 import SearchBar from "@domain/rent/components/search-bar/index";
+import { useState } from "react";
 
 const RentList: React.FC = () => {
 
@@ -26,18 +27,20 @@ const RentList: React.FC = () => {
   const city = searchParams.get("city") ?? '';
   const type = searchParams.get("type") ?? '';
 
-  const getProperties = async () => {
-    const response = await axios.get(`http://localhost:5099/properties?city=${city}&type=${type}`);
+  const getProperties = async (searchText: string) => {
+    const url = `http://localhost:5099/properties?city=${city}&type=${type}` + (searchText.length > 0 ? `&neighborhood=${searchText}` : "");
+    const response = await axios.get(url);
     return response.data;
   };
 
-  const { data: properties } = useQuery("properties", getProperties);
+  const [searchText, setSearchText] = useState<string>("");
+  const { data: properties } = useQuery(["properties", searchText], () => getProperties(searchText));
 
   const whatsappLink = "https://wa.me/+5584998277184?text=Olá!%20Gostaria%20de%20conversar%20sobre%20um%20imóvel."
 
   return (
     <>
-      <SearchBar />
+      <SearchBar onChange={(e) => setSearchText(e.target.value)} />
       {properties?.map((property: any) => {
         return (
         <Row key={property.id}>

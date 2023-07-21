@@ -16,14 +16,18 @@ const InputWrapper = styled.div`
     flex-grow: 1;;
 `
 
-const SearchBar: React.FC = () => {
+type Props = {
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const SearchBar: React.FC<Props> = ({ onChange }) => {
   return (
     <Container>
       <div>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </div>
       <InputWrapper>
-        <Input label="Digite do bairro ou cidade" />
+        <Input onChange={onChange} label="Digite do bairro ou cidade" />
       </InputWrapper>
     </Container>
   );
