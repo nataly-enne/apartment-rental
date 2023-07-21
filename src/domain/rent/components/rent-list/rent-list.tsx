@@ -28,7 +28,7 @@ const RentList: React.FC = () => {
   const type = searchParams.get("type") ?? '';
 
   const getProperties = async (searchText: string) => {
-    const url = `http://localhost:5099/properties?city=${city}&type=${type}` + (searchText.length > 0 ? `&neighborhood=${searchText}` : "");
+    const url = `http://localhost:5099/properties?city=${city}&type=${type}&searchText=${searchText}`;
     const response = await axios.get(url);
     return response.data;
   };
