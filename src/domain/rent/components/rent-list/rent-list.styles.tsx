@@ -41,3 +41,8 @@ export const Description = styled.p`
   padding-top: 20px;
   color: #5e6a82;
 `;
+
+export const ChipsContainer = styled.div`
+  margin-left: 50px;
+  margin-bottom: 20px;
+`;
